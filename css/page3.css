@@ -8,7 +8,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     position: relative;
-    margin-top: 20px;
     }
 .modal {
     background-color: white;
@@ -22,14 +21,13 @@ body {
     color: white;
     padding: 15px;
     font-size: 1.25em;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
-    width: calc(100% - 30px);
+    width: 100%;
+    max-width: 970px;
 }
 .modal-header span {
     color: white;
@@ -51,6 +49,7 @@ body {
     font-weight: bold;
     display: block;
     margin: 10px 0 5px;
+    color: #626262;
 }
 .modal-content textarea {
     width: 100%;
@@ -151,11 +150,69 @@ body {
     font-weight: bold;
 }
 .footer {
-    position: absolute;
+    position: fixed;
     padding: 20px;
     box-shadow: 0 0 5px #ccc;
     z-index: 1000;
-    width: calc(100% - 40px);
+    width: 100%;
+    max-width: 960px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    bottom: 0px;
+    background: #fff;
+}
+
+.in-out {
+    width: calc(100% / 2);
+}
+.test-cases-header {
+    display: flex;
+    gap: 20px;
+}
+.in-out select {
+    width: 100%;
+    padding: 10px;
+    background: #cccccc4a;
+    color: #626262;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.test-cases-section {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.test-cases-header {
+    display: flex;
+    justify-content: space-between;
+}
+.test-case {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.test-case input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.arrow {
+    font-size: 20px;
+    color: #888;
+    margin-right: 10px;
 }
